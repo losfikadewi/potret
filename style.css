@@ -9,44 +9,57 @@
    -------------------------------------------------------------------------- */
 :root {
   /* Color Palette */
-  --bg-primary: #fff5f7;          /* Soft Soft Pink / Off-White Warm */
-  --bg-card: #ffffff;             /* Clean White Card Background */
-  --bg-card-glass: rgba(255, 255, 255, 0.82); /* Glassmorphism Card BG */
-  --nav-glass: rgba(255, 245, 247, 0.88);     /* Navbar Glass Effect */
-  
-  --primary-pink: #ec4899;        /* Soft Pink Vibrant for Primary Highlights */
-  --primary-pink-hover: #db2777;  /* Darker Vibrant Pink for Hover */
-  --primary-pink-light: #f472b6;  /* Soft Pink Mid Accent */
-  
-  --soft-pink: #fbcfe8;           /* Subtle Rose / Peach Accent */
-  --soft-pink-light: #fdf2f8;     /* Ultra Light Pink Tint */
-  --soft-pink-subtle: #fde8e8;    /* Peach/Rose Hover Background */
-  
-  --text-main: #374151;           /* Dark Charcoal Gray for High Readability */
-  --text-muted: #6b7280;          /* Subtle Gray for Subtitles and Captions */
-  --text-light: #9ca3af;          /* Light Gray for Secondary Meta */
-  
+  --bg-primary: #fff5f7;
+  /* Soft Soft Pink / Off-White Warm */
+  --bg-card: #ffffff;
+  /* Clean White Card Background */
+  --bg-card-glass: rgba(255, 255, 255, 0.82);
+  /* Glassmorphism Card BG */
+  --nav-glass: rgba(255, 245, 247, 0.88);
+  /* Navbar Glass Effect */
+
+  --primary-pink: #ec4899;
+  /* Soft Pink Vibrant for Primary Highlights */
+  --primary-pink-hover: #db2777;
+  /* Darker Vibrant Pink for Hover */
+  --primary-pink-light: #f472b6;
+  /* Soft Pink Mid Accent */
+
+  --soft-pink: #fbcfe8;
+  /* Subtle Rose / Peach Accent */
+  --soft-pink-light: #fdf2f8;
+  /* Ultra Light Pink Tint */
+  --soft-pink-subtle: #fde8e8;
+  /* Peach/Rose Hover Background */
+
+  --text-main: #374151;
+  /* Dark Charcoal Gray for High Readability */
+  --text-muted: #6b7280;
+  /* Subtle Gray for Subtitles and Captions */
+  --text-light: #9ca3af;
+  /* Light Gray for Secondary Meta */
+
   --border-color: rgba(244, 114, 182, 0.2);
   --border-color-hover: rgba(236, 72, 153, 0.4);
-  
+
   /* Radii */
   --radius-sm: 12px;
   --radius-md: 16px;
   --radius: 20px;
   --radius-lg: 24px;
   --radius-full: 9999px;
-  
+
   /* Shadows & Glows */
   --shadow-soft: 0 10px 25px -5px rgba(236, 72, 153, 0.12);
   --shadow-hover: 0 20px 35px -5px rgba(236, 72, 153, 0.22);
   --shadow-glass: 0 8px 32px 0 rgba(244, 114, 182, 0.12);
   --glow-pink: 0 0 25px rgba(236, 72, 153, 0.35);
-  
+
   /* Transitions */
   --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
+
   /* Typography */
   --font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -54,7 +67,9 @@
 /* --------------------------------------------------------------------------
    2. RESET & BASE STYLES
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -88,12 +103,15 @@ ul {
   list-style: none;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
   outline: none;
@@ -101,8 +119,24 @@ button, input, textarea {
 }
 
 /* --------------------------------------------------------------------------
-   3. BACKGROUND AMBIENT GLOWS & SHAPES
+   3. BACKGROUND AMBIENT GLOWS & LILY PATTERN
    -------------------------------------------------------------------------- */
+.bg-lily-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('lily-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: -2;
+}
+
 .ambient-glow {
   position: fixed;
   border-radius: 50%;
@@ -149,9 +183,17 @@ button, input, textarea {
 }
 
 @keyframes floatSlow {
-  0% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(35px) scale(1.08); }
-  100% { transform: translateY(-25px) scale(0.96); }
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(35px) scale(1.08);
+  }
+
+  100% {
+    transform: translateY(-25px) scale(0.96);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -348,8 +390,15 @@ section {
 }
 
 @keyframes heartPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.22); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.22);
+  }
 }
 
 .nav-menu {
@@ -409,7 +458,7 @@ section {
    7. HERO SECTION (Identitas Diri & Highlight)
    -------------------------------------------------------------------------- */
 .hero {
-  padding: 70px 0 100px;
+  padding: 80px 0;
   min-height: calc(100vh - 74px);
   display: flex;
   align-items: center;
@@ -449,8 +498,15 @@ section {
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 4px 16px rgba(236, 72, 153, 0.15); }
-  50% { box-shadow: 0 4px 24px rgba(236, 72, 153, 0.32); }
+
+  0%,
+  100% {
+    box-shadow: 0 4px 16px rgba(236, 72, 153, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 4px 24px rgba(236, 72, 153, 0.32);
+  }
 }
 
 .greeting-dot {
@@ -544,38 +600,67 @@ section {
   height: 340px;
 }
 
-/* Organic Gradient Blob Frame */
+/* Elegant Circular Glow Ring */
 .avatar-blob-glow {
   position: absolute;
-  inset: -15px;
-  background: linear-gradient(135deg, #f472b6, #ec4899, #fbcfe8);
-  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-  filter: blur(14px);
-  opacity: 0.65;
-  animation: blobMorph 10s ease-in-out infinite alternate;
+  inset: -18px;
+  background: conic-gradient(from 0deg, #f472b6, #ec4899, #fbcfe8, #fce7f3, #f472b6);
+  border-radius: 50%;
+  filter: blur(16px);
+  opacity: 0.6;
+  animation: glowSpin 8s linear infinite;
 }
 
+@keyframes glowSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Circular Photo Frame with Elegant Border */
 .avatar-frame {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #ffffff 0%, #fff0f5 100%);
-  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-  padding: 10px;
-  border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 15px 35px rgba(236, 72, 153, 0.2);
+  background: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fbcfe8 100%);
+  border-radius: 50%;
+  padding: 4px;
+  border: none;
+  box-shadow:
+    0 0 0 6px rgba(236, 72, 153, 0.15),
+    0 0 0 12px rgba(244, 114, 182, 0.08),
+    0 20px 40px rgba(236, 72, 153, 0.2);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: blobMorph 10s ease-in-out infinite alternate;
+  transition: var(--transition-normal);
 }
 
-@keyframes blobMorph {
-  0% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
-  33% { border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%; }
-  66% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
-  100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; }
+.avatar-frame:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 0 6px rgba(236, 72, 153, 0.25),
+    0 0 0 12px rgba(244, 114, 182, 0.15),
+    0 25px 50px rgba(236, 72, 153, 0.3);
+}
+
+/* Photo inside circular frame */
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  border-radius: 100%;
+  transition: var(--transition-normal);
+}
+
+.avatar-frame:hover .avatar-photo {
+  transform: scale(1.06);
 }
 
 .avatar-svg-illu {
@@ -634,13 +719,23 @@ section {
 }
 
 @keyframes floatUp {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-12px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-12px);
+  }
 }
 
 @keyframes floatDown {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(12px); }
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(12px);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1129,8 +1224,17 @@ section {
 }
 
 @keyframes pulseDot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(1.3); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
 }
 
 .social-cards-list {
@@ -1356,11 +1460,11 @@ section {
   .hero-title {
     font-size: 2.8rem;
   }
-  
+
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1372,27 +1476,27 @@ section {
     text-align: center;
     gap: 45px;
   }
-  
+
   .hero-content {
     align-items: center;
   }
-  
+
   .hero-bio {
     margin: 0 auto;
   }
-  
+
   .hero-cta-group {
     justify-content: center;
   }
-  
+
   .hero-stats {
     justify-content: center;
   }
-  
+
   .about-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1427,7 +1531,7 @@ section {
   .nav-toggle-btn {
     display: block;
   }
-  
+
   .nav-cta {
     display: none;
   }
@@ -1435,12 +1539,12 @@ section {
   .hero-title {
     font-size: 2.3rem;
   }
-  
+
   .avatar-wrapper {
     width: 280px;
     height: 280px;
   }
-  
+
   .floating-badge {
     padding: 8px 14px;
     font-size: 0.8rem;
@@ -1457,7 +1561,7 @@ section {
   .social-cards-list {
     grid-template-columns: 1fr;
   }
-  
+
   .personal-info-list {
     grid-template-columns: 1fr;
   }
@@ -1476,12 +1580,15 @@ section {
   .btn {
     width: 100%;
   }
-  
+
   .stat-item {
     align-items: center;
   }
-  
-  .about-card, .skills-card, .contact-info-card, .contact-form-card {
+
+  .about-card,
+  .skills-card,
+  .contact-info-card,
+  .contact-form-card {
     padding: 28px 20px;
   }
 }
@@ -1527,4 +1634,3 @@ section {
   font-weight: 600;
   color: var(--text-main);
 }
-
