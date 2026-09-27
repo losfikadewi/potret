@@ -127,7 +127,7 @@ textarea {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('lily-bg.jpg');
+  background-image: url('img/lily-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -255,6 +255,7 @@ section {
 .gradient-text {
   background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #f472b6 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -380,6 +381,7 @@ section {
 .nav-brand-text {
   background: linear-gradient(135deg, var(--text-main) 30%, var(--primary-pink) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -654,7 +656,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 50%;
+  object-position: center 80%;
   border-radius: 100%;
   transition: var(--transition-normal);
 }
@@ -742,42 +744,59 @@ section {
    8. ABOUT ME SECTION (Detail Identitas & Interactive Skills)
    -------------------------------------------------------------------------- */
 .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  display: flex;
+  flex-direction: column;
   gap: 36px;
-  align-items: start;
 }
 
-/* Personal Identity Card */
+/* Personal Identity Card (Memanjang / Full Width) */
 .about-card {
-  padding: 38px 34px;
+  padding: 40px 42px;
+  width: 100%;
 }
 
 .about-card-title {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
   color: var(--text-main);
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
+.about-card-content {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.about-bio-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .about-bio-text {
   color: var(--text-muted);
   line-height: 1.8;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   font-size: 1rem;
+}
+
+.about-bio-text:last-child {
+  margin-bottom: 0;
 }
 
 .personal-info-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  padding: 20px;
+  padding: 24px;
   background: rgba(255, 245, 247, 0.6);
   border-radius: var(--radius-md);
   border: 1px solid rgba(251, 207, 232, 0.4);
+  margin-top: 0;
 }
 
 .info-box {
@@ -831,7 +850,10 @@ section {
 
 /* Skills Showcase Card */
 .skills-card {
-  padding: 38px 34px;
+  padding: 40px 42px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .skill-category-group {
@@ -899,7 +921,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
@@ -927,7 +949,7 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 30px;
 }
 
@@ -1173,18 +1195,30 @@ section {
    11. SOCIAL MEDIA & CONTACT SECTION
    -------------------------------------------------------------------------- */
 .contact-grid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 40px;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Left Contact Card & Socials */
+/* Centered Contact Card & Socials */
 .contact-info-card {
-  padding: 40px 34px;
+  max-width: 760px;
+  width: 100%;
+  padding: 44px 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 28px;
+  margin: 0 auto;
+}
+
+.contact-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .contact-cta-title {
@@ -1211,7 +1245,7 @@ section {
   font-weight: 600;
   padding: 8px 16px;
   border-radius: var(--radius-full);
-  align-self: flex-start;
+  align-self: center;
 }
 
 .availability-dot {
@@ -1241,6 +1275,8 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  width: 100%;
+  text-align: left;
 }
 
 .social-item {
@@ -1495,6 +1531,11 @@ section {
 
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-card-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .contact-grid {

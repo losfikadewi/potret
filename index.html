@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -105,7 +105,8 @@
 
                             <!-- Photo Frame -->
                             <div class="avatar-frame">
-                                <img src="foto-fika.png" alt="Foto Sulistiana Losfika Dewi" class="avatar-photo">
+                                <img src="assets/img/foto-fika2.jpeg" alt="Foto Sulistiana Losfika Dewi"
+                                    class="avatar-photo">
                             </div>
                         </div>
                     </div>
@@ -128,57 +129,55 @@
                 </div>
 
                 <div class="about-grid">
-                    <!-- Left: Identity & Story Card -->
+                    <!-- Top: Identity & Story Card (Memanjang / Full Width) -->
                     <div class="glass-card about-card">
                         <h3 class="about-card-title">
                             <span>Tentang Saya</span>
-                            <span style="color: var(--primary-pink)"></span>
+                            <span style="color: var(--primary-pink)">✨</span>
                         </h3>
 
-                        <p class="about-bio-text">
-                            Halo! Saya <strong>Sulistiana Losfika Dewi</strong> (biasa disapa <strong>Fika</strong>),
-                            seorang mahasiswi Program Studi <strong>Teknik Informatika</strong> angkatan 2024.
-                            Saya memiliki ketertarikan tinggi untuk terus belajar dalam pengembangan website sisi
-                            antarmuka (Frontend) serta
-                            desain UI/UX.
-                        </p>
+                        <div class="about-card-content">
+                            <div class="about-bio-col">
+                                <p class="about-bio-text">
+                                    Halo! Saya <strong>Sulistiana Losfika Dewi</strong> (biasa disapa <strong>Fika</strong>),
+                                    seorang mahasiswi Program Studi <strong>Teknik Informatika</strong> angkatan 2024.
+                                    Saya memiliki ketertarikan tinggi untuk terus belajar dalam pengembangan website sisi
+                                    antarmuka (Frontend) serta
+                                    desain UI/UX.
+                                </p>
 
-                        <p class="about-bio-text">
-                            Aku masih terus belajar dan belum berhenti eksplor. Jadi, website ini juga menjadi
-                            bagian kecil dari perjalanan aku untuk belajar, mencoba, dan berkembang.
-                        </p>
+                                <p class="about-bio-text">
+                                    Aku masih terus belajar dan belum berhenti eksplor. Jadi, website ini juga menjadi
+                                    bagian kecil dari perjalanan aku untuk belajar, mencoba, dan berkembang.
+                                </p>
+                            </div>
 
-                        <!-- Personal Info Grid -->
-                        <div class="personal-info-list">
-                            <div class="info-box">
-                                <span class="info-label">Nama Lengkap</span>
-                                <span class="info-value">Sulistiana Losfika Dewi</span>
+                            <!-- Personal Info Grid -->
+                            <div class="personal-info-list">
+                                <div class="info-box">
+                                    <span class="info-label">Nama Lengkap</span>
+                                    <span class="info-value">Sulistiana Losfika Dewi</span>
+                                </div>
+                                <div class="info-box">
+                                    <span class="info-label">NIM</span>
+                                    <span class="info-value">24040040</span>
+                                </div>
+                                <div class="info-box">
+                                    <span class="info-label">Program Studi</span>
+                                    <span class="info-value">Teknik Informatika</span>
+                                </div>
+                                <div class="info-box">
+                                    <span class="info-label">Angkatan</span>
+                                    <span class="info-value">2024</span>
+                                </div>
                             </div>
-                            <div class="info-box">
-                                <span class="info-label">NIM</span>
-                                <span class="info-value">24040040</span>
-                            </div>
-                            <div class="info-box">
-                                <span class="info-label">Program Studi</span>
-                                <span class="info-value">Teknik Informatika</span>
-                            </div>
-                            <div class="info-box">
-                                <span class="info-label">Angkatan</span>
-                                <span class="info-value">2024</span>
-                            </div>
-                        </div>
-
-                        <!-- Core Values -->
-                        <div class="about-values-box">
-
                         </div>
                     </div>
 
-                    <!-- Right: Interactive Skill Badges / Tags (Hover Lift Effect) -->
+                    <!-- Bottom: Interactive Skill Badges / Tags (Hover Lift Effect) -->
                     <div class="glass-card skills-card">
                         <h3 class="about-card-title">
-                            <span>Pengalaman<span>
-                                    <span style="color: var(--primary-pink)">
+                            <span>Pengalaman</span>
                         </h3>
 
                         <!-- Category 1: Frontend Technologies -->
@@ -250,19 +249,16 @@
                                     <span class="skill-pill-icon"></span>
                                     <span>Menjadi Anggota Paskibraka Kota Cilegon tahun 2022.</span>
                                 </div>
-
-                                <div class="skills-badge-list">
-                                    <div class="skill-pill">
-                                        <span class="skill-pill-icon"></span>
-                                        <span>Melatih pengibaran 17 Agustus di Yayasan Al-Khairiyah Citangkil tahun
-                                            2025.</span>
-                                    </div>
-
+                                <div class="skill-pill">
+                                    <span class="skill-pill-icon"></span>
+                                    <span>Melatih pengibaran 17 Agustus di Yayasan Al-Khairiyah Citangkil tahun
+                                        2025.</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- ==========================================
@@ -280,9 +276,8 @@
 
                 <!-- Interactive Category Filter Tabs -->
                 <div class="project-filters-wrap">
-                    <button class="project-filter-btn active" data-filter="all">Semua Proyek (6)</button>
+                    <button class="project-filter-btn active" data-filter="all">Semua Proyek (2)</button>
                     <button class="project-filter-btn" data-filter="web">Web Development</button>
-                    <button class="project-filter-btn" data-filter="uiux">UI/UX Design</button>
                     <button class="project-filter-btn" data-filter="academic">Tugas Kuliah</button>
                 </div>
 
@@ -347,7 +342,7 @@
                             </div>
 
                             <div class="project-actions">
-                                <a href="index_vark_backup.html" target="_blank" class="project-btn project-btn-demo">
+                                <a href="https://potret.my.id" target="_blank" class="project-btn project-btn-demo">
                                     <span>Live Preview</span>
                                     <span>↗</span>
                                 </a>
@@ -430,196 +425,99 @@
                             </div>
                         </div>
                     </article>
-
-
-
-                    <!-- ==========================================
-             6. SOCIAL MEDIA & CONTACT SECTION
-             ========================================== -->
-                    <section id="contact">
-                        <div class="container">
-                            <!-- Section Header -->
-                            <div class="section-header">
-                                <span class="section-badge">💌 Hubungi Saya</span>
-                                <h2 class="section-title">Mari Berkolaborasi!</h2>
-                                <p class="section-subtitle">
-                                    "Let's build something aesthetic & impactful together!" Pintu komunikasi selalu
-                                    terbuka untuk
-                                    diskusi ide, magang, atau proyek seru lainnya.
-                                </p>
-                            </div>
-
-                            <div class="contact-grid">
-                                <!-- Left: Contact Details & Social Media Cards -->
-                                <div class="glass-card contact-info-card">
-                                    <div>
-                                        <span class="availability-tag">
-                                            <span class="availability-dot"></span>
-                                            <span>Tersedia untuk Magang & Freelance</span>
-                                        </span>
-                                        <h3 class="contact-cta-title" style="margin-top: 16px;">
-                                            Siap Mewujudkan Ide Digital Impian Anda ♡
-                                        </h3>
-                                        <p class="contact-cta-desc">
-                                            Jangan ragu untuk menghubungi saya melalui saluran media sosial atau
-                                            formulir pesan di
-                                            samping. Saya akan membalas secepat mungkin!
-                                        </p>
-                                    </div>
-
-                                    <!-- Social Media Cards / Icons (Direct Links) -->
-                                    <div class="social-cards-list">
-                                        <!-- Instagram -->
-                                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                                            class="social-item">
-                                            <div class="social-icon-box">📸</div>
-                                            <div class="social-meta">
-                                                <span class="social-name">Instagram</span>
-                                                <span class="social-handle">@sulistianafika</span>
-                                            </div>
-                                        </a>
-
-                                        <!-- LinkedIn -->
-                                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                                            class="social-item">
-                                            <div class="social-icon-box">💼</div>
-                                            <div class="social-meta">
-                                                <span class="social-name">LinkedIn</span>
-                                                <span class="social-handle">Sulistiana Losfika</span>
-                                            </div>
-                                        </a>
-
-                                        <!-- GitHub -->
-                                        <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                                            class="social-item">
-                                            <div class="social-icon-box">🐙</div>
-                                            <div class="social-meta">
-                                                <span class="social-name">GitHub</span>
-                                                <span class="social-handle">@sulistianafika</span>
-                                            </div>
-                                        </a>
-
-                                        <!-- Email Direct -->
-                                        <a href="mailto:sulistianafikadewi@gmail.com" class="social-item">
-                                            <div class="social-icon-box">📧</div>
-                                            <div class="social-meta">
-                                                <span class="social-name">Email Pribadi</span>
-                                                <span class="social-handle">sulistiana@gmail.com</span>
-                                            </div>
-                                        </a>
-
-                                        <!-- WhatsApp -->
-                                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer"
-                                            class="social-item">
-                                            <div class="social-icon-box">💬</div>
-                                            <div class="social-meta">
-                                                <span class="social-name">WhatsApp</span>
-                                                <span class="social-handle">Chat WhatsApp</span>
-                                            </div>
-                                        </a>
-
-                                        <!-- TikTok / Design Share -->
-                                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"
-                                            class="social-item">
-                                            <div class="social-icon-box">🎵</div>
-                                            <div class="social-meta">
-                                                <span class="social-name">TikTok / Vibe</span>
-                                                <span class="social-handle">@fika.creates</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Right: Aesthetic Glassmorphism Contact Form -->
-                                <div class="glass-card contact-form-card">
-                                    <form id="contact-form" class="contact-form">
-                                        <!-- Input Nama -->
-                                        <div class="form-group">
-                                            <label for="sender-name" class="form-label">
-                                                <span>👤</span>
-                                                <span>Nama Lengkap</span>
-                                            </label>
-                                            <input type="text" id="sender-name" class="form-input"
-                                                placeholder="Misal: Kak Nabila / Bpk. Rudi" required>
-                                        </div>
-
-                                        <!-- Input Email -->
-                                        <div class="form-group">
-                                            <label for="sender-email" class="form-label">
-                                                <span>📧</span>
-                                                <span>Alamat Email</span>
-                                            </label>
-                                            <input type="email" id="sender-email" class="form-input"
-                                                placeholder="nama@perusahaan.com atau email aktif" required>
-                                        </div>
-
-                                        <!-- Select Subjek / Topik -->
-                                        <div class="form-group">
-                                            <label for="sender-topic" class="form-label">
-                                                <span>🏷️</span>
-                                                <span>Topik Pesan</span>
-                                            </label>
-                                            <select id="sender-topic" class="form-select">
-                                                <option value="kolaborasi">Kolaborasi Proyek Website</option>
-                                                <option value="magang">Tawaran Kerja / Magang IT</option>
-                                                <option value="uiux">Konsultasi Desain UI/UX</option>
-                                                <option value="sapa">Sekadar Menyapa & Diskusi</option>
-                                            </select>
-                                        </div>
-
-                                        <!-- Input Pesan -->
-                                        <div class="form-group">
-                                            <label for="sender-message" class="form-label">
-                                                <span>💬</span>
-                                                <span>Pesan Anda</span>
-                                            </label>
-                                            <textarea id="sender-message" class="form-textarea"
-                                                placeholder="Tuliskan ide proyek, penawaran, atau pertanyaan Anda di sini..."
-                                                required></textarea>
-                                        </div>
-
-                                        <!-- Submit Button -->
-                                        <button type="submit" class="btn btn-primary form-btn-submit">
-                                            <span>Kirim Pesan Sekarang</span>
-                                            <span>🚀</span>
-                                        </button>
-
-                                        <p class="form-status-note">
-                                            🔒 Pesan Anda akan langsung terkirim dan dibalas dengan ramah ♡
-                                        </p>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-    </main>
-
-    <!-- ==========================================
-         7. MINIMALIST FOOTER
-         ========================================== -->
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <span class="gradient-text">Fika<span class="footer-heart">.dev ♡</span></span>
+                </div>
             </div>
+        </section>
 
-            <nav class="footer-nav">
-                <a href="#home" class="footer-link">Beranda</a>
-                <a href="#about" class="footer-link">Tentang</a>
-                <a href="#projects" class="footer-link">Proyek</a>
-                <a href="#strengths" class="footer-link">Kelebihan</a>
-                <a href="#contact" class="footer-link">Kontak</a>
-            </nav>
+        <!-- ==========================================
+             5. SOCIAL MEDIA & CONTACT SECTION
+             ========================================== -->
+        <section id="contact">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header">
+                    <h2 class="section-title">Mari Berkolaborasi!</h2>
+                    <p class="section-subtitle">
+                        "Let's build something aesthetic & impactful together!" Pintu komunikasi selalu
+                        terbuka untuk
+                        diskusi ide, magang, atau proyek seru lainnya.
+                    </p>
+                </div>
 
-            <p class="footer-message">
-                Crafted with <span class="footer-heart">♡</span>, continuous learning, and Soft Pink Vibes.
-            </p>
+                <div class="contact-grid">
+                    <!-- Left: Contact Details & Social Media Cards -->
+                    <div class="glass-card contact-info-card">
+                        <div class="contact-card-header">
+                            <p class="contact-cta-title">Siap Mewujudkan Ide Digital Impian Anda ♡</p>
+                            <p class="contact-cta-desc">
+                                Jangan ragu untuk menghubungi saya melalui saluran media sosial di bawah ini. Saya akan
+                                membalas secepat mungkin!
+                            </p>
+                        </div>
 
-            <p class="footer-copyright">
-                &copy; 2026 <strong>Sulistiana Losfika Dewi</strong>. All rights reserved.
-            </p>
-        </div>
-    </footer>
+                        <!-- Social Media Cards / Icons (Direct Links) -->
+                        <div class="social-cards-list">
+                            <!-- Instagram -->
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                                class="social-item">
+                                <div class="social-icon-box">📸</div>
+                                <div class="social-meta">
+                                    <span class="social-name">Instagram</span>
+                                    <span class="social-handle">@sulistianafika</span>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                                class="social-item">
+                                <div class="social-icon-box">💼</div>
+                                <div class="social-meta">
+                                    <span class="social-name">LinkedIn</span>
+                                    <span class="social-handle">Sulistiana Losfika</span>
+                                </div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <div class="social-icon-box">🐙</div>
+                                <div class="social-meta">
+                                    <span class="social-name">GitHub</span>
+                                    <span class="social-handle">@sulistianafika</span>
+                                </div>
+                            </a>
+
+                            <!-- Email Direct -->
+                            <a href="mailto:sulistianafikadewi@gmail.com" class="social-item">
+                                <div class="social-icon-box">📧</div>
+                                <div class="social-meta">
+                                    <span class="social-name">Email Pribadi</span>
+                                    <span class="social-handle">sulistiana@gmail.com</span>
+                                </div>
+                            </a>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <div class="social-icon-box">💬</div>
+                                <div class="social-meta">
+                                    <span class="social-name">WhatsApp</span>
+                                    <span class="social-handle">Chat WhatsApp</span>
+                                </div>
+                            </a>
+
+                            <!-- TikTok / Design Share -->
+                            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <div class="social-icon-box">🎵</div>
+                                <div class="social-meta">
+                                    <span class="social-name">TikTok / Vibe</span>
+                                    <span class="social-handle">@fika.creates</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Floating Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas"
